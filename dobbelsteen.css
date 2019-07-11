@@ -1,0 +1,48 @@
+    
+#boxes{
+  width:90%;
+  height:500px;
+  margin:auto;
+  text-align: center;
+}
+
+#btns{
+  padding:20px;
+  background:#f4f4f4;
+  margin:auto;
+  width:25%;
+}
+
+#btns button{
+  background:#fff;
+  padding:5px 10px;
+  border:0;
+}
+
+#btns .fa{
+  font-size:30px;
+}
+
+#btns .fa-play-circle{
+  color:green;
+}
+
+#btns .fa-pause-circle{
+  color:red;
+}
+
+.box{
+  position: relative;
+  width:100px;
+  height: 100px;
+  margin:4px;
+  display:inline-block;
+}
+
+.een{
+  background-image:url('3d1.jpg')};
+
+.dobbel{
+  height:50px;
+  width: 50px;
+}

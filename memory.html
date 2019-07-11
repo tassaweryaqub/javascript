@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <h1> <title> Fortnite Memory Game</title></h1>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<!-- voer uw naam in --> 
+
+<div id= "divResult">	
+	<button id="btnPrompt" onclick="toonPrompt();">Voer uw gamenaam in</button>
+</div>
+
+
+<!-- stars -->
+
+<body>
+
+  <div class="container">
+
+    <header>
+      <h1 class="title"> Fortnite Memory Game </h1>
+    </header>
+
+    <!-- ScorePaneel aanmaken,  timer neerzetten - resetbutton -->
+
+
+    <section class="scoreheader">
+      <ul class="stars">
+        <li>
+        	  <i id="star1" class="fa fa-star fa-2x"></i>
+        </li>
+        <li>
+          	  <i id="star2" class="fa fa-star fa-2x"></i>
+        </li>
+        <li>
+              <i id="star3" class="fa fa-star fa-2x"></i>
+        </li>
+      </ul>
+      <!--aantal keren dat geklikt is -->
+      <span class="moves">0</span>
+      <span class="move">Moves</span>
+      <!--timer die loopt nadat eerste kaart is geklikt-->
+      <span class="timer">0:00</span>
+    </section>
+
+    <!--restarten-->
+    <div id= "resetBtn" class = "reset">reset
+      <i class="fa fa-repeat"></i>
+    </div>
+    <!-- </section> -->
+
+<!-- nodig voor eindresultaat model -->
+
+    <div id="simpleModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">    
+     	<span class="closeBtn">&times;</span>
+       	  <h2> Goed Gedaan!!! </h2>
+        </div>
+	    <div class="modal-body">
+          <!-- <h3>Gefeliciteerd!</h3> -->
+          <img class="front-face" src="victory.png" alt="Victory Royal" />
+          <div>Uw eindtijd is
+            <div class="clock"> 0:00 </div>          
+            <div class= "moves"></div>  
+
+          </div>
+          <img class = "shooter" src="victory.png" alt="Victory Royal" />
+            </ul>        
+        </div>
+        <div class="modal-footer">           
+    
+          <button id="modalBtn" class="replay" onclick="restartGame()">Play Again!!!</button>
+        </div>
+      </div>
+    </div>
+
+    <!--game board-->
+    <section class="fcc memory-game">
+
+      <div class="memory-card" data-card="FtKnox1">
+        <img class="back-face" src="voorkant.png" alt="Voorkant" />
+        <img class="front-face" src="merry.png" alt="Merry" />
+      </div>
+
+      <div class="memory-card" data-card="FtKnox1">
+        <img class="back-face" src="voorkant.png" alt="Voorkant" />
+      <img class="front-face" src="merry.png" alt="Merry" />
+      </div>
+
+      <div class="memory-card" data-card="ohioSprint18">
+        <img class="back-face" src="voorkant.png" alt="Voorkant" />
+         <img class="front-face" src="tomatohead.png" alt="Tomato" />
+      </div>
+
+      <div class="memory-card" data-card="ohioSprint18">
+        <img class="back-face" src="voorkant.png" alt="Voorkant" />
+         <img class="front-face" src="tomatohead.png" alt="Tomato" />
+      </div>
+
+      <div class="memory-card" data-card="WD firejump">
+        <img class="back-face" src="voorkant.png" alt="Voorkant" />
+         <img class="front-face" src="blackknight.png" alt="blackknight" />
+      </div>
+
+      <div class="memory-card" data-card="WD firejump">
+    <img class="back-face" src="voorkant.png" alt="Voorkant" />
+         <img class="front-face" src="blackknight.png" alt="blackknight" />
+      </div>
+
+      <div class="memory-card" data-card="WD together">
+       <img class="back-face" src="voorkant.png" alt="Voorkant" />
+       <img class="front-face" src="nitenite.png" alt="NiteNite" />
+
+      </div>
+
+      <div class="memory-card" data-card="WD together">
+     <img class="back-face" src="voorkant.png" alt="Voorkant" />
+     <img class="front-face" src="nitenite.png" alt="NiteNite" />
+
+      </div>
+
+      <div class="memory-card" data-card="warriordash">
+        <img class="back-face" src="voorkant.png" alt="Voorkant" />
+        <img class="front-face" src="soccer.png" alt="Soccer" />
+      </div>
+
+      <div class="memory-card" data-card="warriordash">
+       <img class="back-face" src="voorkant.png" alt="Voorkant" />
+       <img class="front-face" src="soccer.png" alt="Soccer" />
+      </div>
+
+      <div class="memory-card" data-card="dirty">
+       <img class="back-face" src="voorkant.png" alt="Voorkant" />
+        <img class="front-face" src="galaxy.png" alt="Galaxy" />
+      </div>
+
+      <div class="memory-card" data-card="dirty">
+ 		<img class="back-face" src="voorkant.png" alt="Voorkant" />
+        <img class="front-face" src="galaxy.png" alt="Galaxy" />
+      </div>
+
+      <div class="memory-card" data-card="FtKnox2">
+         <img class="back-face" src="voorkant.png" alt="Voorkant" />
+        <img class="front-face" src="lilwhip.png" alt="lilwhip" />
+      </div>
+
+      <div class="memory-card" data-card="FtKnox2">
+      	<img class="back-face" src="voorkant.png" alt="Voorkant" />
+        <img class="front-face" src="lilwhip.png" alt="lilwhip" />
+      </div>
+
+      <div class="memory-card" data-card="spartan fire jump">
+        <img class="back-face" src="voorkant.png" alt="Voorkant" />
+      <img class="front-face" src="slushy.png" alt="slushy" />
+      </div>
+
+      <div class="memory-card" data-card="spartan fire jump">
+      <img class="back-face" src="voorkant.png" alt="Voorkant" />
+        <img class="front-face" src="slushy.png" alt="slushy" />
+      </div>
+
+  
+  </section>
+
+</div>
+  <script src="script.js"></script>
+</body>
+</html>
